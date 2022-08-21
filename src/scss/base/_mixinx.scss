@@ -2,7 +2,7 @@
 
 @mixin telefono{
     @media(min-width: v.$telefono){
-        @content;
+        @content; // El @Content Permite añadir contenido dentro del Mixin
     }   
 }
 
@@ -24,7 +24,7 @@
     }
 }
 
-
+// se agregan parametros al momento de llamar el mixin para añadir los valores que necesites
 @mixin grid($columnas, $espaciado){
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);

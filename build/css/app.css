@@ -325,7 +325,7 @@ body {
 
 p {
   font-size: 1.2rem;
-  color: #000000;
+  color: #2e3440;
   line-height: 1.5;
 }
 
@@ -356,15 +356,17 @@ h3 {
 }
 
 img {
+  max-width: 100%;
   width: 100%;
+  height: auto;
   display: block;
 }
 
 .header {
-  background-color: #4CB8B3;
+  background-color: #2e3440;
 }
 .header h1 {
-  color: #FFFFFF;
+  color: #eceff4;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -393,7 +395,7 @@ img {
 .navegacion-principal a {
   display: block;
   text-align: center;
-  color: #FFFFFF;
+  color: #eceff4;
   font-size: 2.4rem;
   margin-bottom: 1rem;
 }
@@ -403,7 +405,7 @@ img {
   }
 }
 .navegacion-principal a:hover {
-  color: #fef46d;
+  color: #ebcb8b;
 }
 
 .video {
@@ -416,8 +418,8 @@ img {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgb(211, 0, 255);
-  background: linear-gradient(279deg, rgba(211, 0, 255, 0.5200280796) 0%, rgba(255, 0, 110, 0.1698880236) 100%);
+  background: rgb(74, 76, 99);
+  background: linear-gradient(279deg, rgba(30, 31, 121, 0.52) 0%, rgba(255, 0, 110, 0.1698880236) 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -436,15 +438,15 @@ img {
   z-index: 10;
 }
 .contenido-video h2 {
-  color: #FFFFFF;
+  color: #eceff4;
   margin: 0;
   font-size: 7rem;
 }
 .contenido-video p {
-  background-color: #F53756;
+  background-color: #bf616a;
   display: inline-block;
   padding: 1rem 2rem;
-  color: #FFFFFF;
+  color: #eceff4;
   font-weight: 700;
   font-size: 2.4rem;
   margin: 0;
@@ -476,6 +478,81 @@ img {
   margin-bottom: 2rem;
 }
 .contenido-festival .fecha {
-  color: #F53756;
+  color: #bf616a;
   font-weight: 700;
+}
+
+.lineup {
+  background-color: #2e3440;
+  padding: 5rem 0;
+}
+.lineup h3, .lineup p {
+  text-align: center;
+  color: #eceff4;
+}
+.lineup .dias {
+  text-align: center;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.escenarios-contenedor p {
+  color: #3b4252;
+}
+
+.escenario {
+  padding-top: 2rem;
+}
+.escenario p:after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 2rem auto 0 auto;
+}
+
+.edm .nombre-escenario:after {
+  background-image: url(../img/icono_edm.png);
+}
+
+.rock .nombre-escenario:after {
+  background-image: url(../img/icono_rock.png);
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
+}
+
+.bg-amarillo {
+  background-color: #d8dee9;
+}
+.bg-amarillo li:nth-child(odd) {
+  background-color: #c8d0e0;
+}
+
+.bg-verde {
+  background-color: #88c0d0;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: #63adc2;
 }

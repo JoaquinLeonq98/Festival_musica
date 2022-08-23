@@ -19,10 +19,14 @@
 }
 
 .escenarios-contenedor{
+    
+    @include m.grid(1, 3rem);
+    @include m.telefono {
+        @include m.grid(1, 4rem);
+    }
     @include m.tablet {
         @include m.grid(2, 5rem);
     }
-    
     p{
         color: v.$polarNight;
     }

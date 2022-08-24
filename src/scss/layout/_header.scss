@@ -3,7 +3,16 @@
 
 .header{
      background-color: v.$negro;
-
+     @include m.tablet {
+        &.fijar-header{
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow:.2rem .2rem .2rem .2rem v.$polarNight;
+        }
+     }
+   
      h1{
         color: v.$blanco;
         text-align: center;

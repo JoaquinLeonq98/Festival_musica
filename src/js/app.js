@@ -1,10 +1,42 @@
 // aplicación para generar una galeria de imagenes de forma dinámica
 document.addEventListener('DOMContentLoaded', function() {
     iniciarApp();
+    
 })
 
 function iniciarApp() {
+    navegacionFija();
     crearGaleria();
+    scrollNav();
+}
+
+function navegacionFija() {
+    const barra = document.querySelector('.header');
+    const sobreFestival = document.querySelector('.sobre-festival');
+    const body= document.querySelector('body');
+
+    window.addEventListener('scroll', function() {
+        if(sobreFestival.getBoundingClientRect().top <= 0) {
+            barra.classList.add('fijar-header');
+            body.classList.add('body-scroll');
+        }
+        else {
+            barra.classList.remove('fijar-header');
+            body.classList.remove('body-scroll');
+        }
+    });
+}
+
+function scrollNav() {
+    const enlaces = document.querySelectorAll('.navegacion-principal a');
+    enlaces.forEach(enlace => {
+        enlace.addEventListener('click', function(e) {
+            e.preventDefault();
+            const seccion = document.querySelector(e.target.attributes.href.value)
+
+            seccion.scrollIntoView({behavior: 'smooth'}); // smooth hace que el scroll sea suave medianamente esta API
+        });
+    });
 }
 
 
